@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: spring-cloud-eureka
+  security:
+    user:
+      name: admin
+      password: 111111 #访问地址可以变为curl风格-http://name:password@ip:port/api
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:111111@KONTIN1:8761/eureka/,http://admin:111111@KONTIN2:8762/eureka/,http://admin:111111@KONTIN3:8763/eureka/
+    
+
+#伪分布式:/etc/hosts 127.0.0.1   KONTIN1 KONTIN2 KONTIN3
+---
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: KONTIN1
+
+---
+spring:
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: KONTIN2
+    
+---
+spring:
+  profiles: peer3
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: KONTIN3

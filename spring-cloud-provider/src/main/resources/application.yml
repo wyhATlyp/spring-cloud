@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-provider
+    
+server:
+  port: 1219
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:111111@KONTIN1:8761/eureka/,http://admin:111111@KONTIN2:8762/eureka/,http://admin:111111@KONTIN3:8763/eureka/
