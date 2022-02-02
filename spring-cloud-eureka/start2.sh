@@ -1,1 +1,1 @@
-java -jar target/springeureka-0.0.1-SNAPSHOT.jar > eureka2.log --spring.profiles.active=peer2 &
+java -jar spring-cloud-eureka-0.0.1-SNAPSHOT.jar > log/eureka2.log --spring.config.location=application.yml --spring.profiles.active=peer2 &

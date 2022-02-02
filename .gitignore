@@ -8,3 +8,5 @@
 **/.settings/
 **/file/
 **/build/
+.idea/
+**/*.log

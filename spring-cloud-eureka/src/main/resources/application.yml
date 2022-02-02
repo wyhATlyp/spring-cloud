@@ -10,9 +10,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:111111@KONTIN1:8761/eureka/,http://admin:111111@KONTIN2:8762/eureka/,http://admin:111111@KONTIN3:8763/eureka/
-    
 
 #伪分布式:/etc/hosts 127.0.0.1   KONTIN1 KONTIN2 KONTIN3
+#182.92.178.241  KONTIN1 KONTIN2 KONTIN3 kontin1 kontin2 kontin3
 ---
 spring:
   profiles: peer1
